@@ -11,7 +11,7 @@ const HomePage = () => {
   return (
     <Row justify="space-between">
       {charities?.map((charity, i) => (
-        <Col key={`${i}`} lg={6} xs={12}>
+        <Col key={`${i}`} data-testid="col" lg={6} xs={12}>
           <CardItem charity={charity} index={i} />
         </Col>
       ))}

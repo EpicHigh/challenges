@@ -25,9 +25,9 @@ const App = () => {
     <Container>
       <Box top={4}>
         <Header>Omise Tamboon React</Header>
-        <Donation>All donations: {donate}</Donation>
-        {message.success && <Success>{message.success}</Success>}
-        {message.error && <Error>{message.error}</Error>}
+        <Donation data-testid="donation">All donations: {donate}</Donation>
+        {message?.success && <Success data-testid="success">{message.success}</Success>}
+        {message?.error && <Error data-testid="error">{message.error}</Error>}
         <HomePage />
       </Box>
     </Container>
