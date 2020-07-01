@@ -29,6 +29,10 @@ export function makePayments(charitiesId, amount, currency) {
     try {
       const response = await fetch('http://localhost:3001/payments', {
         method: 'POST',
+        headers: {
+          'Content-Type': 'application/json; charset=utf-8',
+        },
+        credentials: 'same-origin',
         body: JSON.stringify({ charitiesId, amount, currency }),
       });
       if (response.status >= 200 && response.status < 300) {
